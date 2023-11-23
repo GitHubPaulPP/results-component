@@ -1,0 +1,75 @@
+/* @font-face declaration */
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Root variables */
+:root {
+    /* Color scheme based on style guide */
+    --primary-light-red: hsl(0, 100%, 67%);
+    --primary-orangey-yellow: hsl(39, 100%, 56%);
+    --primary-green-teal: hsl(166, 100%, 37%);
+    --primary-cobalt-blue: hsl(234, 85%, 45%);
+
+    --gradient-light-slate-blue: hsl(252, 100%, 67%);
+    --gradient-light-royal-blue: hsl(241, 81%, 54%);
+
+    --gradient-violet-blue: hsla(256, 72%, 46%, 1);
+    --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-pale-blue: hsl(221, 100%, 96%);
+    --neutral-light-lavender: hsl(241, 100%, 89%);
+    --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Typography based on style guide */
+    --font-size-body: 18px;
+    --font-family-hanken-grotesk: 'Hanken Grotesk', sans-serif;
+    --font-weight-medium: 500;
+    /* Assuming 500 is medium as per the guide */
+    --font-weight-bold: 700;
+    --font-weight-extra-bold: 800;
+
+    /* Layout widths from the style guide */
+    --width-mobile: 375px;
+    --width-desktop: 1440px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    border: 1px solid; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: center;
+    min-height: 100vh;
+
+}
+
+.results-card{
+border: 1px solid red;
+grid-column: 2/3;
+grid-row: 2/4;
+min-height: 100%;
+width: 100%;
+
+}
+
+.summary-card{
+    border: 1px solid blue;
+    grid-column: 3/4;
+    grid-row: 2/4;
+    min-height: 100%;
+    width: 100%;
+
+    
+}
