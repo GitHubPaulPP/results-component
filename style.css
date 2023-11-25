@@ -241,3 +241,51 @@ h3 {
     );
     cursor: pointer;
 }
+
+/* Media query for smaller screens */
+
+@media screen and (max-width: 981px) {
+    .container {
+        grid-template-columns: 1fr;
+        /* Creates a single column for all items */
+        grid-template-rows: auto auto;
+        /* Defines two rows to accommodate both sections */
+    }
+
+    .results-card,
+    .summary-card {
+        grid-column: 1 / -1;
+        /* Makes each card span from the first to the last line of the grid column */
+        grid-row: auto;
+        /* Allows each card to take up as much vertical space as needed */
+    }
+
+    .summary-card {
+        margin-left: 0;
+        /* Resets any negative margin from the larger view */
+        /* If there are other specific styles that only make sense in a side-by-side view, they should be reset here as well */
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        /* Continue with a single column layout as defined in the wider breakpoint */
+        grid-template-columns: 1fr;
+        /* Define rows as auto to allow content to determine the height */
+        grid-template-rows: auto auto;
+    }
+
+    .results-card,
+    .summary-card {
+        /* Ensure each card spans the full width */
+        grid-column: 1 / -1;
+        /* Adjust padding, margins, and potentially other properties for the smaller screen size */
+        padding: 5%;
+        /* Example: Reduce padding */
+        /* More style adjustments specific for small screens can be added here */
+    }
+
+    /* You may also want to adjust font sizes, button sizes, and other elements to fit the smaller screen */
+}
